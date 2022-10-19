@@ -1,24 +1,24 @@
 <template>
   <DataTable :value="productos" responsiveLayout="scroll">
-    <Column
+    <ColumnComponent
       v-for="col of columns"
       :field="col.field"
       :header="col.header"
       :key="col.field"
-    ></Column>
+    ></ColumnComponent>
   </DataTable>
 </template>
 
 <script>
 import axios from "axios";
-import DataTable from "primevue/datatable";
-import Column from "primevue/column";
+// import DataTable from "primevue/datatable";
+// import Column from "primevue/column";
 
 export default {
-  components: {
-    DataTable,
-    Column,
-  },
+//   components: {
+//     DataTable,
+//     Column,
+//   },
   data() {
     return {
       productos: [],
